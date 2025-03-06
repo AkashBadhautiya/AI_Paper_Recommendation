@@ -1,6 +1,9 @@
 streamlit
 torch
-torch_geometric
+torchvision
+torch-geometric
 pandas
-numpy
 scikit-learn
+networkx
+transformers
+sentencepiece
