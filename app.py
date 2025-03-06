@@ -4,6 +4,14 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
+import asyncio
+
+try:
+    asyncio.get_running_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
+
+
 # 🔹 Load trained graph data & paper metadata
 graph_data = torch.load("graph_data.pth")  # Load the graph structure
 papers_df = pd.read_csv("papers.csv")  # Load paper metadata
